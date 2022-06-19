@@ -1,13 +1,332 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.App {
+  background: #222;
+  color: #fff;
+  text-align: center;
+}
+
+span {
+  font-weight: bold;
+}
+
+.party-para {
+  font-size: .8rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 40px;
+  padding: 20px 0;
+}
+
+.menu, .nav-menu-2, .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-right: 40px;
+}
+
+.nav-menu-2 li {
+  margin-right: 20px;
+}
+
+.nav-menu-2 li button, .nav-menu li button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.1rem;
+}
+
+.nav-menu-2 li button {
+  font-weight: 600;
+}
+.btn {
+    background: linear-gradient(to bottom right, #7F43E5, #A14DD6);
+   border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.btn button {
+    color: #fff;
+    font-size: .6rem;
+}
+
+.showcase {
+  background: url('./images/house-4.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+.case-1 {
+  padding: 70px 0 0 40px;
+}
+
+.case-1 h1, .white{
+  color: #fff;
+}
+
+.case-2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  margin-left: 38px;
+}
+
+.case-3 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+.case-4 {
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 90%;
+}
+
+.card-btn {
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.select {
+  padding: 20px;
+}
+
+.select p {
+      text-align: center;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: gray;   
+}
+
+.btc {
+  border: none;
+  color: #fff;
+}
+
+.strong {
+  padding: 10px;
+  border: none;
+  font-weight: 800;
+}
+
+.post {
+      margin: 20px 569px;
+      padding: 15px;
+      background: transparent;
+      border-radius: 13px;
+      border: 2px solid black;
+      cursor: pointer;
+}
+
+.case-button {
+  background: gainsboro;
+  border-right: 1px solid black;
+  padding: 20px 50px;
+}
+
+.purple {
+  border-top-left-radius: 15px;
+  background: linear-gradient(to bottom right, #7F43E5, #A14DD6);
+  color: #fff;
+}
+
+.normal {
+  border-top-right-radius: 15px;
+  border: none;
+}
+
+.room {
+  padding-top: 2rem;
+  padding-left: 4rem;
+}
+.wex {
+    margin:  3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid: 1rem;
+}
+
+.wex .card {
+  max-width: 300px;
+  padding: 0 1rem;
+  width: 100%;
+  font-size: .8rem;
+}
+
+.card-title {
+  margin-top: 15px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+img {
+  border-radius: 15px;
+}
+.mobile {
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width:940px) {
+
+   .menu {
+     position: fixed;
+     background: #fff;
+     left: -100%;
+     padding-top: 1rem;
+     padding-left: 2rem;
+     flex-direction: column;
+     top: 80px;
+     height: 100%;
+     transition-duration: 0.3s;
+     width: 100%;
+   }
+
+   nav.active {
+     left: 0;
+   }
+   .nav-menu, .nav-menu-2 {
+     flex-direction: column;
+   }
+
+     .nav-menu li,
+     .nav-menu-2 li {
+       font-size: 1.2rem;
+       padding: 1rem;
+     }
+
+   .mobile {
+     display: block;
+   }
+   .post {
+     margin: 20px 100px;
+   }
+
+   .case-button {
+     font-size: 0.8rem;
+     padding: 11px 64px;
+   }
+
+   .case-4 {
+     flex-wrap: wrap;
+     border-top-right-radius: 0;
+     justify-content: center;
+     width: 97%;
+
+   }
+
+   .wex {
+     grid-template-columns: repeat(2, 1fr);
+     margin-bottom: 20px;
+   }
+}
+
+@media screen and (max-width: 680px) {
+
+   body {
+     overflow-x: hidden;
+   }
+
+   .party-para {
+     font-size: 0.7rem;
+   }
+    .wex {
+      grid-template-columns: 1fr;
+      margin-bottom: 20px;
+    }
+
+    .room {
+      text-align: center;
+      padding: 50px 50px 20px 50px;
+    }
+    .room h2 {
+      font-size: 1.4rem;
+    }
+
+    .room-para {
+      font-size: 0.8rem;
+    }
+    .wex .card {
+      padding-bottom:20px ;
+    }
+    .case-1 {
+      text-align: center;
+      padding: 50px;
+    }
+
+    .case-1 h1 {
+      margin: 20px 0;
+      line-height: 1.7rem;
+    }
+    .case-2 {
+      margin-left: 38px;
+      margin-right: 38px;
+    }
+
+    .case-3 {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .purple {
+      border-top-right-radius: 15px;
+    }
+
+    .normal {
+      border-top: 1px solid gray;
+      border-top-right-radius: 0;
+    }
+    .case-4 {
+      width: 100%;
+    }
+    .case-button {
+      border-right: none;
+      padding: 20px;
+      width: 100%;
+    }
+    .showcase {
+      height: 1100px;
+    }
+
+    .post {
+        margin: 20px 112px;
+        width: 123px;
+        font-size: 0.8rem;
+     }
+
+     .select {
+       padding: 31px;
+     }
+  
 }
